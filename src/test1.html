@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .rat{
+background-color: aquamarine;
+        border: 2px solid red;
+        border-radius: 10px;
+    }
+    .container ul{
+        overflow: auto;
+        
+        /* z- index(level of stacking ,the one with more value stacks the other one) will not work with position-static */
+        /* higher the order later it shows up in container */
+        /* flex-grow and flex-shrink */
+    }
+    li{
+        padding: 5px;
+        float: left;
+        list-style: none;
+        border: 1px solid black;
+        margin: 5px;
+       cursor: pointer;
+      
+    }
+    .rat{
+        width: 400px;
+        display: inline-block;
+        margin-left: 33.30%;
+    }
+    li:hover{
+        background-color: rgb(163, 130, 193);
+    }
+    .contain{
+        width: 400px;
+        height: 100px;
+        border: 2px solid green;
+        display:flex;
+        flex-direction: row-reverse;
+        flex-basis: 40px;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: brown;
+    }
+
+    .box{
+        padding:4px;
+        margin:6px;
+        border: 2px solid black;
+        height: 40px;
+        width: 50px;
+        color:rgb(103, 41, 160);
+        background-color: bisque;
+    }    
+    #box1{
+        /* order: 30; */
+        flex-basis: 60px;
+        align-self: auto;
+    }
+    }
+    </style>
+</head>
+<body>
+    <header class="rat">
+    <nav class="container">
+        <ul>
+            <li><a href="https://google.com">Home</a></li>
+            <li>Application</li>
+            <li>Contact Us</li>
+        </ul>
+    </nav>
+</header>
+<div class="contain">
+<div class="box" id="box1"> 1st BOX</div>
+<div class="box">2nd BOX</div>
+<div class="box">3rd BOX</div>
+</div>
+</body>
+</html>
